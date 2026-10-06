@@ -72,6 +72,7 @@ function App() {
     setShowProjectForm(false);
     setShowContactMessages(false);
     setShowAbout(false);
+    setEditContent(null);
     setMenuOpen(false);
   };
 
@@ -82,6 +83,7 @@ function App() {
     setShowProjectForm(false);
     setShowContactMessages(false);
     setShowAbout(false);
+    setEditContent(null);
     setMenuOpen(false);
   };
 
@@ -90,6 +92,7 @@ function App() {
     setShowProjectForm(true);
     setShowContactMessages(false);
     setShowAbout(false);
+    setEditContent(null);
     setProjectMessage('');
     setMenuOpen(false);
     fetchProjects();
@@ -197,6 +200,7 @@ function App() {
     setShowProjectForm(false);
     setShowContactMessages(true);
     setShowAbout(false);
+    setEditContent(null);
     setMenuOpen(false);
     fetchContactMessages();
   };
@@ -1022,7 +1026,7 @@ function App() {
         {/* =========================
             EDIT CONTENT
         ========================== */}
-        {editContent && (
+        {showPosts && editContent && (
           <section className="content-form-section edit-section">
 
             <div className="form-header">
